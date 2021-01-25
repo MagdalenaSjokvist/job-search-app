@@ -19,7 +19,7 @@ export default function JobDetailPage(props) {
 	return (
 		<div>
 			<h1>Job Detail Page</h1>
-			{job && <JobListItem job={job} />}
+			{job && <JobListItem job={job} detailpage />}
 		</div>
 	)
 }
