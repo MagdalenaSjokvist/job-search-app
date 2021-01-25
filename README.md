@@ -1,10 +1,10 @@
 - STRUCTURE:
   /jobs/
   JobListPage
+  JobList
   JobListItem
   /jobs/:id (VG)
   JobDetailPage (VG)
-  JobDetail (VG)
 
 - API INSTRUCTIONS - The API has the following structure:
 
