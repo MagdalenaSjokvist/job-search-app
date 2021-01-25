@@ -1,8 +1,18 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react"
+import { mount, shallow } from "enzyme"
+import App from "./App"
+import JobContextProvider from "./contexts/JobContext"
+import { BrowserRouter } from "react-router-dom"
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("Test App", () => {
+	it("renders  correctly", () => {
+		const wrapper = mount(
+			<BrowserRouter>
+				<JobContextProvider>
+					<App />
+				</JobContextProvider>
+			</BrowserRouter>
+		)
+		expect(wrapper.find("div").exists()).toBe(true)
+	})
+})
