@@ -18,10 +18,9 @@ export default function JobSearchForm() {
 
 	return (
 		<div>
-			<label for="job-search">Search for jobs:</label>
 			<input
 				type="search"
-				id="job-search"
+				placeholder="Search for jobs"
 				value={searchString}
 				onChange={(event) => setSearchString(event.target.value)}
 			/>
