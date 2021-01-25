@@ -21,11 +21,15 @@ export default function JobListItem({ job, id, detailpage }) {
 			<p>
 				<strong>{job.type}</strong>
 			</p>
-			<div dangerouslySetInnerHTML={renderDescription()} />
+			<div
+				className="job-description"
+				dangerouslySetInnerHTML={renderDescription()}
+			/>
 			{job.company_url && <a href={job.company_url}>{job.company} website</a>}
 			<img src={job.company_logo}></img>
 			{!detailpage && (
 				<button
+					className="read-more-btn"
 					onClick={() => {
 						history.push(`/jobs/${id}`)
 					}}
@@ -35,6 +39,7 @@ export default function JobListItem({ job, id, detailpage }) {
 			)}
 			{detailpage && (
 				<button
+					className="back-btn"
 					onClick={() => {
 						window.history.back()
 					}}

@@ -30,12 +30,12 @@ describe("Test JobList", () => {
 		const wrapper = shallow(<JobList />)
 		expect(wrapper.find("div").exists()).toBe(true)
 	})
-	it("renders <JobListItem/> when joblist contains any job items", () => {
+	it("renders <JobListItem/> when joblist array contains any job items", () => {
 		const wrapper = mount(<JobList joblist={jobList} />)
 		expect(wrapper.find(JobListItem).exists()).toBe(true)
 	})
-	it("renders 'No jobs found' when joblist is empty", () => {
+	it("renders 'couldn't find a matching job' when joblist array is empty", () => {
 		const wrapper = mount(<JobList joblist={emptyJobList} />)
-		expect(wrapper.find("p").text()).toBe("No jobs found")
+		expect(wrapper.find("p").text()).toContain("couldn't find a matching job")
 	})
 })

@@ -14,17 +14,20 @@ export default function JobSearchForm() {
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => setJobList(data))
+		setSearchString("")
 	}
 
 	return (
 		<div>
 			<input
 				type="search"
-				placeholder="Search for jobs"
+				placeholder="What kind of job are you looking for?"
 				value={searchString}
 				onChange={(event) => setSearchString(event.target.value)}
 			/>
-			<button onClick={handleOnClick}>Search</button>
+			<button className="search-btn" onClick={handleOnClick}>
+				Search
+			</button>
 		</div>
 	)
 }

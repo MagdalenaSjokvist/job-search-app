@@ -7,13 +7,17 @@ export default function JobList({ joblist }) {
 	}, [joblist])
 
 	return (
-		<div>
+		<div className="search-result">
 			{joblist && joblist.length > 0
 				? joblist.map((job) => {
 						const id = job.id
 						return <JobListItem key={id} job={job} id={id} />
 				  })
-				: joblist && <p>No jobs found</p>}
+				: joblist && (
+						<p className="message-no-result">
+							Sorry, couldn't find a matching job &#x1F61E;
+						</p>
+				  )}
 		</div>
 	)
 }
