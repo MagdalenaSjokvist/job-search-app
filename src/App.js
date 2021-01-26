@@ -5,7 +5,7 @@ import JobListPage from "./pages/JobListPage"
 
 function App() {
 	return (
-		<div className="App">
+		<div className="app-container">
 			<Switch>
 				<Route path="/jobs/:id" component={JobDetailPage} />
 				<Route path="/jobs" component={JobListPage} />

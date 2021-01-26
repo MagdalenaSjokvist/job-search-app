@@ -7,7 +7,7 @@ export default function JobListPage() {
 	const { jobList } = useContext(JobContext)
 
 	return (
-		<div className="app-container">
+		<div>
 			<h1>Find a job - GitHub Job Listing</h1>
 			<JobSearchForm />
 			<JobList joblist={jobList} />

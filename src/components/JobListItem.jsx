@@ -13,20 +13,24 @@ export default function JobListItem({ job, id, detailpage }) {
 	}
 
 	return (
-		<div>
+		<div className="job-item-container">
 			{/* <Link to={`/jobs/${id}`}>
 				<h2>{job.title}</h2>
 			</Link> */}
-			<h2>{job.title}</h2>
-			<p>
+			<h2 className="job-title">{job.title}</h2>
+			<p className="job-type">
 				<strong>{job.type}</strong>
 			</p>
 			<div
 				className="job-description"
 				dangerouslySetInnerHTML={renderDescription()}
 			/>
-			{job.company_url && <a href={job.company_url}>{job.company} website</a>}
-			<img src={job.company_logo}></img>
+			{job.company_url && (
+				<a href={job.company_url} className="company-url">
+					{job.company_url}
+				</a>
+			)}
+			<img src={job.company_logo} className="company-logo"></img>
 			{!detailpage && (
 				<button
 					className="read-more-btn"
