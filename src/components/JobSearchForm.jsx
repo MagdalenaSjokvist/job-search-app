@@ -18,7 +18,7 @@ export default function JobSearchForm() {
 	}
 
 	return (
-		<div>
+		<div className="search-container">
 			<input
 				type="search"
 				placeholder="What kind of job are you looking for?"
