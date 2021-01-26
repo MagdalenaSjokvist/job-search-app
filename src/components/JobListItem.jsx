@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 export default function JobListItem({ job, id, detailpage }) {
 	let jobDescription = job.description
@@ -14,9 +14,6 @@ export default function JobListItem({ job, id, detailpage }) {
 
 	return (
 		<div className="job-item-container">
-			{/* <Link to={`/jobs/${id}`}>
-				<h2>{job.title}</h2>
-			</Link> */}
 			<h2 className="job-title">{job.title}</h2>
 			<p className="job-type">
 				<strong>{job.type}</strong>
