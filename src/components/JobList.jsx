@@ -2,12 +2,8 @@ import React, { useContext, useEffect, useState } from "react"
 import JobListItem from "../components/JobListItem"
 
 export default function JobList({ joblist }) {
-	useEffect(() => {
-		console.log(joblist)
-	}, [joblist])
-
 	return (
-		<div className="search-result">
+		<div className="search-result-container">
 			{joblist && joblist.length > 0
 				? joblist.map((job) => {
 						const id = job.id

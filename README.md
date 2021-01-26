@@ -54,7 +54,7 @@
     vercel etc)
 
 - TIPS:
-  To render HTML that is returned from the API, please use
-  dangerouslySetInnerHTML (https://reactjs.org/docs/dom-elements.html)
-  To make sure urls are handled correctly on the hosting service, use
-  HashRouter if necessary.
+  - To render HTML that is returned from the API, please use
+    dangerouslySetInnerHTML (https://reactjs.org/docs/dom-elements.html)
+  - To make sure urls are handled correctly on the hosting service, use
+    HashRouter if necessary.
